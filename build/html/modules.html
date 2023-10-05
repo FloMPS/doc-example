@@ -1,0 +1,1926 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MagAlpha Evaluation API &mdash; MagAlpha Evaluation API 1.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=fc837d61"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="MagAlpha Evaluation API Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            MagAlpha Evaluation API
+              <img src="_static/DocumentationLogo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">MagAlpha Evaluation API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData"><code class="docutils literal notranslate"><span class="pre">SensorAngleData</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.angle_in_lsb_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleData.angle_in_lsb_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.angle_in_degree_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleData.angle_in_degree_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.time_in_microsecond_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleData.time_in_microsecond_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.angle_in_lsb"><code class="docutils literal notranslate"><span class="pre">SensorAngleData.angle_in_lsb</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.angle_in_degree"><code class="docutils literal notranslate"><span class="pre">SensorAngleData.angle_in_degree</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.resolution_in_degree"><code class="docutils literal notranslate"><span class="pre">SensorAngleData.resolution_in_degree</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.resolution_in_bits"><code class="docutils literal notranslate"><span class="pre">SensorAngleData.resolution_in_bits</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.noise_rms"><code class="docutils literal notranslate"><span class="pre">SensorAngleData.noise_rms</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.sampling_period_in_microsecond"><code class="docutils literal notranslate"><span class="pre">SensorAngleData.sampling_period_in_microsecond</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.zero_crossing_index_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleData.zero_crossing_index_array</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_in_lsb_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.angle_in_lsb_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_in_degree_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.angle_in_degree_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.time_in_microsecond_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.time_in_microsecond_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_in_lsb"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.angle_in_lsb</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_in_degree"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.angle_in_degree</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.resolution_in_degree"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.resolution_in_degree</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.resolution_in_bits"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.resolution_in_bits</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.noise_rms"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.noise_rms</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.sampling_period_in_microsecond"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.sampling_period_in_microsecond</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_inc_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.abz_inc_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_inc_mod_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.abz_inc_mod_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_angle_in_degree_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.abz_angle_in_degree_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_angle_in_degree_without_offset_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.abz_angle_in_degree_without_offset_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_error_in_degree_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.angle_error_in_degree_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_error_without_offset_in_degree_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.angle_error_without_offset_in_degree_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_encoder_interface_id"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.abz_encoder_interface_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.zero_crossing_index_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.zero_crossing_index_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_angle_in_degree_sorted_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.abz_angle_in_degree_sorted_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_in_degree_sorted_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.angle_in_degree_sorted_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_error_in_degree_sorted_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.angle_error_in_degree_sorted_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_error_without_offset_in_degree_sorted_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.angle_error_without_offset_in_degree_sorted_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.recontructed_reference_angle_in_degree_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.recontructed_reference_angle_in_degree_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.reconstructed_angle_error_in_degree_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.reconstructed_angle_error_in_degree_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.reconstructed_angle_error_in_degree_without_offset_array"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.reconstructed_angle_error_in_degree_without_offset_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.harmonics_amplitude"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.harmonics_amplitude</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.harmonics_phase"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.harmonics_phase</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.offset"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.offset</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.inl"><code class="docutils literal notranslate"><span class="pre">SensorAngleVsReferenceEncoderData.inl</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.sensor_connected"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.sensor_connected</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.sensor_data_raw"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.sensor_data_raw</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.sensor_data_corrected"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.sensor_data_corrected</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.connect_mcu_board"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.connect_mcu_board()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.disconnect_mcu_board"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.disconnect_mcu_board()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_spi_mode"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.set_spi_mode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_spi_mode"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.get_spi_mode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_spi_clock_frequency"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.set_spi_clock_frequency()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_spi_clock_frequency"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.get_spi_clock_frequency()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.read_register"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.read_register()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.read_register_burst"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.read_register_burst()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.write_register"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.write_register()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.write_register_burst"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.write_register_burst()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.store_block_of_registers"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.store_block_of_registers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.restore_all_registers"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.restore_all_registers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_zero_value"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.set_zero_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_zero_value"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.get_zero_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_current_angle_as_zero"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.set_current_angle_as_zero()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_etx_ety"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.set_etx_ety()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_etx_ety"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.get_etx_ety()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_bct_value"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.set_bct_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_bct_value"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.get_bct_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_abz_ppt"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.set_abz_ppt()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_abz_ppt"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.get_abz_ppt()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.measure_angle"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.measure_angle()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.measure_angle_vs_reference_encoder"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.measure_angle_vs_reference_encoder()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.measure_speed"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.measure_speed()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_turn"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.set_turn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.measure_turn"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.measure_turn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.reset_user_calibration"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.reset_user_calibration()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.measure_inl_extract_calibration_table"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.measure_inl_extract_calibration_table()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.compute_calibration_table_cw_ccw"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.compute_calibration_table_cw_ccw()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.store_user_calibration"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.store_user_calibration()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.save_user_calibration_table_file"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.save_user_calibration_table_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.clear_error_flag"><code class="docutils literal notranslate"><span class="pre">MagAlphaEvaluationAPI.clear_error_flag()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#module-magalpha_evaluation_api.harmonics">Harmonics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData"><code class="docutils literal notranslate"><span class="pre">SensorData</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.reconstructed_angle_error_array"><code class="docutils literal notranslate"><span class="pre">SensorData.reconstructed_angle_error_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.reconstructed_angle_error_without_offset_array"><code class="docutils literal notranslate"><span class="pre">SensorData.reconstructed_angle_error_without_offset_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.angle_array"><code class="docutils literal notranslate"><span class="pre">SensorData.angle_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.reconstructed_reference_angle_array"><code class="docutils literal notranslate"><span class="pre">SensorData.reconstructed_reference_angle_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.time_array"><code class="docutils literal notranslate"><span class="pre">SensorData.time_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.error_array"><code class="docutils literal notranslate"><span class="pre">SensorData.error_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.correction_table"><code class="docutils literal notranslate"><span class="pre">SensorData.correction_table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.angle_table"><code class="docutils literal notranslate"><span class="pre">SensorData.angle_table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.error_remaining_after_correction"><code class="docutils literal notranslate"><span class="pre">SensorData.error_remaining_after_correction</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.error_remaining_after_correction_over_time"><code class="docutils literal notranslate"><span class="pre">SensorData.error_remaining_after_correction_over_time</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.error_without_offset_array"><code class="docutils literal notranslate"><span class="pre">SensorData.error_without_offset_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.reference_angle_array"><code class="docutils literal notranslate"><span class="pre">SensorData.reference_angle_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.error_after_correction_array"><code class="docutils literal notranslate"><span class="pre">SensorData.error_after_correction_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.zero_crossing_index_array"><code class="docutils literal notranslate"><span class="pre">SensorData.zero_crossing_index_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.reference_angle_array_sorted"><code class="docutils literal notranslate"><span class="pre">SensorData.reference_angle_array_sorted</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.angle_array_sorted"><code class="docutils literal notranslate"><span class="pre">SensorData.angle_array_sorted</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.error_array_sorted"><code class="docutils literal notranslate"><span class="pre">SensorData.error_array_sorted</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.error_without_offset_array_sorted"><code class="docutils literal notranslate"><span class="pre">SensorData.error_without_offset_array_sorted</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.sorting_indices_array"><code class="docutils literal notranslate"><span class="pre">SensorData.sorting_indices_array</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.angle_array_sorted_before_calibration"><code class="docutils literal notranslate"><span class="pre">SensorData.angle_array_sorted_before_calibration</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.error_without_offset_array_sorted_before_calibration"><code class="docutils literal notranslate"><span class="pre">SensorData.error_without_offset_array_sorted_before_calibration</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.correct_angle_using_correction_table"><code class="docutils literal notranslate"><span class="pre">SensorData.correct_angle_using_correction_table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.inl"><code class="docutils literal notranslate"><span class="pre">SensorData.inl</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.offset"><code class="docutils literal notranslate"><span class="pre">SensorData.offset</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.h1"><code class="docutils literal notranslate"><span class="pre">SensorData.h1</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.h2"><code class="docutils literal notranslate"><span class="pre">SensorData.h2</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.h3"><code class="docutils literal notranslate"><span class="pre">SensorData.h3</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.h4"><code class="docutils literal notranslate"><span class="pre">SensorData.h4</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.h5"><code class="docutils literal notranslate"><span class="pre">SensorData.h5</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.h6"><code class="docutils literal notranslate"><span class="pre">SensorData.h6</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.h7"><code class="docutils literal notranslate"><span class="pre">SensorData.h7</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.h8"><code class="docutils literal notranslate"><span class="pre">SensorData.h8</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi1"><code class="docutils literal notranslate"><span class="pre">SensorData.phi1</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi2"><code class="docutils literal notranslate"><span class="pre">SensorData.phi2</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi3"><code class="docutils literal notranslate"><span class="pre">SensorData.phi3</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi4"><code class="docutils literal notranslate"><span class="pre">SensorData.phi4</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi5"><code class="docutils literal notranslate"><span class="pre">SensorData.phi5</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi6"><code class="docutils literal notranslate"><span class="pre">SensorData.phi6</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi7"><code class="docutils literal notranslate"><span class="pre">SensorData.phi7</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi8"><code class="docutils literal notranslate"><span class="pre">SensorData.phi8</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi1_in_degree"><code class="docutils literal notranslate"><span class="pre">SensorData.phi1_in_degree</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi2_in_degree"><code class="docutils literal notranslate"><span class="pre">SensorData.phi2_in_degree</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi3_in_degree"><code class="docutils literal notranslate"><span class="pre">SensorData.phi3_in_degree</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi4_in_degree"><code class="docutils literal notranslate"><span class="pre">SensorData.phi4_in_degree</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi5_in_degree"><code class="docutils literal notranslate"><span class="pre">SensorData.phi5_in_degree</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi6_in_degree"><code class="docutils literal notranslate"><span class="pre">SensorData.phi6_in_degree</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi7_in_degree"><code class="docutils literal notranslate"><span class="pre">SensorData.phi7_in_degree</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.phi8_in_degree"><code class="docutils literal notranslate"><span class="pre">SensorData.phi8_in_degree</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.detect_zero_crossing"><code class="docutils literal notranslate"><span class="pre">SensorData.detect_zero_crossing()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.get_harmonics"><code class="docutils literal notranslate"><span class="pre">SensorData.get_harmonics()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.get_harmonics_xy_non_equidistant"><code class="docutils literal notranslate"><span class="pre">SensorData.get_harmonics_xy_non_equidistant()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.reconstruct_signal_with_n_harmonics"><code class="docutils literal notranslate"><span class="pre">SensorData.reconstruct_signal_with_n_harmonics()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.set_number_of_pole_pairs_of_the_magnet"><code class="docutils literal notranslate"><span class="pre">SensorData.set_number_of_pole_pairs_of_the_magnet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.get_number_of_pole_pairs_of_the_magnet"><code class="docutils literal notranslate"><span class="pre">SensorData.get_number_of_pole_pairs_of_the_magnet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.reconstruct_averaged_signal_with_8_harmonics"><code class="docutils literal notranslate"><span class="pre">SensorData.reconstruct_averaged_signal_with_8_harmonics()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.trunkate_array_before_first_zero_crossing"><code class="docutils literal notranslate"><span class="pre">SensorData.trunkate_array_before_first_zero_crossing()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.trunkate_array_before_first_and_afer_last_zero_crossings"><code class="docutils literal notranslate"><span class="pre">SensorData.trunkate_array_before_first_and_afer_last_zero_crossings()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.set_harmonics_from_list"><code class="docutils literal notranslate"><span class="pre">SensorData.set_harmonics_from_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.compute_correction_table"><code class="docutils literal notranslate"><span class="pre">SensorData.compute_correction_table()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.get_correction_values_in_lsb"><code class="docutils literal notranslate"><span class="pre">SensorData.get_correction_values_in_lsb()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.get_correction_values_to_write_to_ma600_registers"><code class="docutils literal notranslate"><span class="pre">SensorData.get_correction_values_to_write_to_ma600_registers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.extract_sensor_data"><code class="docutils literal notranslate"><span class="pre">SensorData.extract_sensor_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData.save_files"><code class="docutils literal notranslate"><span class="pre">SensorData.save_files()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#module-magalpha_evaluation_api.magalpha_part_properties">MagAlpha Part Properties</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode"><code class="docutils literal notranslate"><span class="pre">MagAlphaSPIMode</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode.MODE_0"><code class="docutils literal notranslate"><span class="pre">MagAlphaSPIMode.MODE_0</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode.MODE_3"><code class="docutils literal notranslate"><span class="pre">MagAlphaSPIMode.MODE_3</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MagAlpha Evaluation API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">MagAlpha Evaluation API</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-magalpha_evaluation_api.api_ma_rp_pico">
+<span id="magalpha-evaluation-api"></span><h1>MagAlpha Evaluation API<a class="headerlink" href="#module-magalpha_evaluation_api.api_ma_rp_pico" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">magalpha_evaluation_api.api_ma_rp_pico.</span></span><span class="sig-name descname"><span class="pre">SensorAngleData</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData" title="Link to this definition"></a></dt>
+<dd><p>Class containing all extracted data during static measurements.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.angle_in_lsb_array">
+<span class="sig-name descname"><span class="pre">angle_in_lsb_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.angle_in_lsb_array" title="Link to this definition"></a></dt>
+<dd><p>Array of angle in lsb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.int16]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.angle_in_degree_array">
+<span class="sig-name descname"><span class="pre">angle_in_degree_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.angle_in_degree_array" title="Link to this definition"></a></dt>
+<dd><p>Array of angle in degree (converted from angle_in_lsb_array)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.float32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.time_in_microsecond_array">
+<span class="sig-name descname"><span class="pre">time_in_microsecond_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.time_in_microsecond_array" title="Link to this definition"></a></dt>
+<dd><p>Array of time in microseconds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.int32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.angle_in_lsb">
+<span class="sig-name descname"><span class="pre">angle_in_lsb</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.angle_in_lsb" title="Link to this definition"></a></dt>
+<dd><p>Average angle in lsb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.angle_in_degree">
+<span class="sig-name descname"><span class="pre">angle_in_degree</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.angle_in_degree" title="Link to this definition"></a></dt>
+<dd><p>Average angle in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.resolution_in_degree">
+<span class="sig-name descname"><span class="pre">resolution_in_degree</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.resolution_in_degree" title="Link to this definition"></a></dt>
+<dd><p>Resolution in degree (3 * sigma of angle_in_degree_array)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.resolution_in_bits">
+<span class="sig-name descname"><span class="pre">resolution_in_bits</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.resolution_in_bits" title="Link to this definition"></a></dt>
+<dd><p>Resolution in lsb (log2(360 / (6 * sigma of angle_in_degree_array)))</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.noise_rms">
+<span class="sig-name descname"><span class="pre">noise_rms</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.noise_rms" title="Link to this definition"></a></dt>
+<dd><p>Sigma (standard deviation)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.sampling_period_in_microsecond">
+<span class="sig-name descname"><span class="pre">sampling_period_in_microsecond</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.sampling_period_in_microsecond" title="Link to this definition"></a></dt>
+<dd><p>Average of diff of time_in_microsecond_array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.zero_crossing_index_array">
+<span class="sig-name descname"><span class="pre">zero_crossing_index_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData.zero_crossing_index_array" title="Link to this definition"></a></dt>
+<dd><p>Array of index where angle diff &gt;= trigger_threshold</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.int16]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">magalpha_evaluation_api.api_ma_rp_pico.</span></span><span class="sig-name descname"><span class="pre">SensorAngleVsReferenceEncoderData</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData" title="Link to this definition"></a></dt>
+<dd><p>Class containing all data for dynamic measurements with external reference encoder.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_in_lsb_array">
+<span class="sig-name descname"><span class="pre">angle_in_lsb_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_in_lsb_array" title="Link to this definition"></a></dt>
+<dd><p>Array of angle in lsb (sensor)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.int16]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_in_degree_array">
+<span class="sig-name descname"><span class="pre">angle_in_degree_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_in_degree_array" title="Link to this definition"></a></dt>
+<dd><p>Array of angle in degree (sensor, converted from angle_in_lsb_array)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.float32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.time_in_microsecond_array">
+<span class="sig-name descname"><span class="pre">time_in_microsecond_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.time_in_microsecond_array" title="Link to this definition"></a></dt>
+<dd><p>Array of time in microseconds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.int32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_in_lsb">
+<span class="sig-name descname"><span class="pre">angle_in_lsb</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_in_lsb" title="Link to this definition"></a></dt>
+<dd><p>Average of angle_in_lsb_array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_in_degree">
+<span class="sig-name descname"><span class="pre">angle_in_degree</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_in_degree" title="Link to this definition"></a></dt>
+<dd><p>Average of angle_in_degree_array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.resolution_in_degree">
+<span class="sig-name descname"><span class="pre">resolution_in_degree</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.resolution_in_degree" title="Link to this definition"></a></dt>
+<dd><p>Resolution in degree (3 * sigma of angle_in_degree_array)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.resolution_in_bits">
+<span class="sig-name descname"><span class="pre">resolution_in_bits</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.resolution_in_bits" title="Link to this definition"></a></dt>
+<dd><p>Resolution in lsb (log2(360 / (6 * sigma of angle_in_degree_array)))</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.noise_rms">
+<span class="sig-name descname"><span class="pre">noise_rms</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.noise_rms" title="Link to this definition"></a></dt>
+<dd><p>Sigma (standard deviation)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.sampling_period_in_microsecond">
+<span class="sig-name descname"><span class="pre">sampling_period_in_microsecond</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.sampling_period_in_microsecond" title="Link to this definition"></a></dt>
+<dd><p>Average of diff of time_in_microsecond_array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_inc_array">
+<span class="sig-name descname"><span class="pre">abz_inc_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_inc_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.int32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_inc_mod_array">
+<span class="sig-name descname"><span class="pre">abz_inc_mod_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_inc_mod_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.int16]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_angle_in_degree_array">
+<span class="sig-name descname"><span class="pre">abz_angle_in_degree_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_angle_in_degree_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.float32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_angle_in_degree_without_offset_array">
+<span class="sig-name descname"><span class="pre">abz_angle_in_degree_without_offset_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_angle_in_degree_without_offset_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.float32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_error_in_degree_array">
+<span class="sig-name descname"><span class="pre">angle_error_in_degree_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_error_in_degree_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.float32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_error_without_offset_in_degree_array">
+<span class="sig-name descname"><span class="pre">angle_error_without_offset_in_degree_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_error_without_offset_in_degree_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.float32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_encoder_interface_id">
+<span class="sig-name descname"><span class="pre">abz_encoder_interface_id</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_encoder_interface_id" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>AbzInterface</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.zero_crossing_index_array">
+<span class="sig-name descname"><span class="pre">zero_crossing_index_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.zero_crossing_index_array" title="Link to this definition"></a></dt>
+<dd><p>Array of index where angle diff &gt;= trigger_threshold</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.int16]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_angle_in_degree_sorted_array">
+<span class="sig-name descname"><span class="pre">abz_angle_in_degree_sorted_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.abz_angle_in_degree_sorted_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.float32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_in_degree_sorted_array">
+<span class="sig-name descname"><span class="pre">angle_in_degree_sorted_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_in_degree_sorted_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.float32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_error_in_degree_sorted_array">
+<span class="sig-name descname"><span class="pre">angle_error_in_degree_sorted_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_error_in_degree_sorted_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.float32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_error_without_offset_in_degree_sorted_array">
+<span class="sig-name descname"><span class="pre">angle_error_without_offset_in_degree_sorted_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.angle_error_without_offset_in_degree_sorted_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.float32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.recontructed_reference_angle_in_degree_array">
+<span class="sig-name descname"><span class="pre">recontructed_reference_angle_in_degree_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.recontructed_reference_angle_in_degree_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.float32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.reconstructed_angle_error_in_degree_array">
+<span class="sig-name descname"><span class="pre">reconstructed_angle_error_in_degree_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.reconstructed_angle_error_in_degree_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.float32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.reconstructed_angle_error_in_degree_without_offset_array">
+<span class="sig-name descname"><span class="pre">reconstructed_angle_error_in_degree_without_offset_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.reconstructed_angle_error_in_degree_without_offset_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray[Any, np.dtype[np.float32]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.harmonics_amplitude">
+<span class="sig-name descname"><span class="pre">harmonics_amplitude</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.harmonics_amplitude" title="Link to this definition"></a></dt>
+<dd><p>Harmonics amplitude in degree (h1 to h8)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.harmonics_phase">
+<span class="sig-name descname"><span class="pre">harmonics_phase</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.harmonics_phase" title="Link to this definition"></a></dt>
+<dd><p>Harmonics phase in degree (h1 to h8)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.offset">
+<span class="sig-name descname"><span class="pre">offset</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.offset" title="Link to this definition"></a></dt>
+<dd><p>Offset of INL</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.inl">
+<span class="sig-name descname"><span class="pre">inl</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData.inl" title="Link to this definition"></a></dt>
+<dd><p>Peak-to-peak error divided by two</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">magalpha_evaluation_api.api_ma_rp_pico.</span></span><span class="sig-name descname"><span class="pre">MagAlphaEvaluationAPI</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI" title="Link to this definition"></a></dt>
+<dd><p>MagAlpha Evaluation API. All the below methods can be used by the customer.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.sensor_connected">
+<span class="sig-name descname"><span class="pre">sensor_connected</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.sensor_connected" title="Link to this definition"></a></dt>
+<dd><p>‘True’ if connected to the evaluation kit, ‘False’ otherwise</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.sensor_data_raw">
+<span class="sig-name descname"><span class="pre">sensor_data_raw</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.sensor_data_raw" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData" title="magalpha_evaluation_api.harmonics.SensorData">SensorData</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.sensor_data_corrected">
+<span class="sig-name descname"><span class="pre">sensor_data_corrected</span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.sensor_data_corrected" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData" title="magalpha_evaluation_api.harmonics.SensorData">SensorData</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.connect_mcu_board">
+<span class="sig-name descname"><span class="pre">connect_mcu_board</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">auto_enabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_serial_address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.connect_mcu_board" title="Link to this definition"></a></dt>
+<dd><p>Connect MagAlpha EVKT.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>autoEnabled</strong> (<em>bool</em>) – Automatic connect to first MPS MagAlpha EVKT board.</p></li>
+<li><p><strong>device_serial_address</strong> (<em>str</em>) – ‘COMx’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True for success, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.disconnect_mcu_board">
+<span class="sig-name descname"><span class="pre">disconnect_mcu_board</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.disconnect_mcu_board" title="Link to this definition"></a></dt>
+<dd><p>Disconnect MagAlpha EVKT.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_spi_mode">
+<span class="sig-name descname"><span class="pre">set_spi_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spi_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode" title="magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode"><span class="pre">MagAlphaSPIMode</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_spi_mode" title="Link to this definition"></a></dt>
+<dd><p>Set SPI communication mode (MODE0 or MODE3).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>spi_mode</strong> (<a class="reference internal" href="#magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode" title="magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode"><em>MagAlphaSPIMode</em></a>) – Enumeration from magalpha properties.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_spi_mode">
+<span class="sig-name descname"><span class="pre">get_spi_mode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode" title="magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode"><span class="pre">MagAlphaSPIMode</span></a></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_spi_mode" title="Link to this definition"></a></dt>
+<dd><p>Get SPI mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Enumeration from MagAlpha properties.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode" title="magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode">MagAlphaSPIMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_spi_clock_frequency">
+<span class="sig-name descname"><span class="pre">set_spi_clock_frequency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spi_clock_frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_spi_clock_frequency" title="Link to this definition"></a></dt>
+<dd><p>Set SPI communication clock frequency.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>spi_clock_frequency</strong> (<em>int</em>) – SPI clock frequency in Hz (min is 0, max is 25e6).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_spi_clock_frequency">
+<span class="sig-name descname"><span class="pre">get_spi_clock_frequency</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_spi_clock_frequency" title="Link to this definition"></a></dt>
+<dd><p>Get SPI clock frequency.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>SPI clock frequency in Hz.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.read_register">
+<span class="sig-name descname"><span class="pre">read_register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">register_address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.read_register" title="Link to this definition"></a></dt>
+<dd><p>Read single register</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>register_address</strong> (<em>int</em>) – Register address.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Register value.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.read_register_burst">
+<span class="sig-name descname"><span class="pre">read_register_burst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_of_registers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.read_register_burst" title="Link to this definition"></a></dt>
+<dd><p>Read register burst.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_of_registers</strong> (<em>int</em>) – Number of registers to read from start address.</p></li>
+<li><p><strong>start_address</strong> (<em>int</em>) – Start address.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of register value.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.write_register">
+<span class="sig-name descname"><span class="pre">write_register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">register_address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">register_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.write_register" title="Link to this definition"></a></dt>
+<dd><p>Write single register.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>register_address</strong> (<em>int</em>) – Address of the register.</p></li>
+<li><p><strong>register_value</strong> (<em>int</em>) – Value to write.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.write_register_burst">
+<span class="sig-name descname"><span class="pre">write_register_burst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">register_value_to_write_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.write_register_burst" title="Link to this definition"></a></dt>
+<dd><p>Write register burst.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>register_value_to_write_list</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – List of register value to write.</p></li>
+<li><p><strong>start_address</strong> (<em>int</em>) – Start address.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.store_block_of_registers">
+<span class="sig-name descname"><span class="pre">store_block_of_registers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">register_block_to_store</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.store_block_of_registers" title="Link to this definition"></a></dt>
+<dd><p>Store register block into non-volatile memory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>register_block_to_store</strong> (<em>int</em>) – Block number (0 for address 0 to 31 &amp; 1 for address 32 to 63).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.restore_all_registers">
+<span class="sig-name descname"><span class="pre">restore_all_registers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.restore_all_registers" title="Link to this definition"></a></dt>
+<dd><p>Restore all registers from non-volatile memory into register map.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_zero_value">
+<span class="sig-name descname"><span class="pre">set_zero_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_zero_value" title="Link to this definition"></a></dt>
+<dd><p>Set zero setting of the sensor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>zero</strong> (<em>int</em>) – Set zero setting of the sensor (min is 0, max is 65535).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_zero_value">
+<span class="sig-name descname"><span class="pre">get_zero_value</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_zero_value" title="Link to this definition"></a></dt>
+<dd><p>Get zero setting of the sensor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Zero setting of the sensor.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_current_angle_as_zero">
+<span class="sig-name descname"><span class="pre">set_current_angle_as_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_current_angle_as_zero" title="Link to this definition"></a></dt>
+<dd><p>Set current angle as zero.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>New zero setting of the sensor.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_etx_ety">
+<span class="sig-name descname"><span class="pre">set_etx_ety</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">etx_ety</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_etx_ety" title="Link to this definition"></a></dt>
+<dd><p>Set ETX, ETY flags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>etx_ety</strong> (<em>int</em>) – Axis for bias current adjustement for side shaft operation (0 = Disabled, 1 = ETX, 2 = ETY)</p></li>
+<li><p><strong>ety</strong> (<em>int</em>) – Axis for bias current adjustement (side shaft operation)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_etx_ety">
+<span class="sig-name descname"><span class="pre">get_etx_ety</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_etx_ety" title="Link to this definition"></a></dt>
+<dd><p>Get ETX, ETY flags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ETX, ETY flags (0 = Disabled, 1 = ETX, 2 = ETY)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_bct_value">
+<span class="sig-name descname"><span class="pre">set_bct_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bct</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_bct_value" title="Link to this definition"></a></dt>
+<dd><p>Set BCT setting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bct</strong> (<em>int</em>) – Set BCT of the sensor (min is 0, max is 255).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_bct_value">
+<span class="sig-name descname"><span class="pre">get_bct_value</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_bct_value" title="Link to this definition"></a></dt>
+<dd><p>Get BCT setting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>BCT setting.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_abz_ppt">
+<span class="sig-name descname"><span class="pre">set_abz_ppt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">abz_ppt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_abz_ppt" title="Link to this definition"></a></dt>
+<dd><p>Set pulse per turn of specified ABZ interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>abz_ppt</strong> (<em>int</em>) – Pulse per turn of ABZ interface (min is 0, max is 65535).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_abz_ppt">
+<span class="sig-name descname"><span class="pre">get_abz_ppt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.get_abz_ppt" title="Link to this definition"></a></dt>
+<dd><p>Get pulse per turn of specified interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of pulse per turn of the specified ABZ interface.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.measure_angle">
+<span class="sig-name descname"><span class="pre">measure_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_of_measures</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_in_microseconds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData" title="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData"><span class="pre">SensorAngleData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.measure_angle" title="Link to this definition"></a></dt>
+<dd><p>Measure angle vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_of_measures</strong> (<em>int</em>) – Number of samples to acquire (min is 1, max is 2048).</p></li>
+<li><p><strong>delay_in_microseconds</strong> (<em>int</em>) – Delay time between samples in microseconds (min is 0, max is 1000000).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Class containing all the samples &amp; other informations like sigma, resolution in lsb / degree etc…, None when invalid parameters are given.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData" title="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleData">SensorAngleData</a> | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.measure_angle_vs_reference_encoder">
+<span class="sig-name descname"><span class="pre">measure_angle_vs_reference_encoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_of_measures</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_in_microseconds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trigger_threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData" title="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData"><span class="pre">SensorAngleVsReferenceEncoderData</span></a></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.measure_angle_vs_reference_encoder" title="Link to this definition"></a></dt>
+<dd><p>Measure angle of sensor VS angle of reference encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_of_measures</strong> (<em>int</em>) – Number of samples that are acquired.</p></li>
+<li><p><strong>delay_in_microseconds</strong> (<em>int</em>) – Delay time between each sample.</p></li>
+<li><p><strong>magnet_pole_pairs</strong> (<em>int</em>) – Number of pole pairs of the target magnet.</p></li>
+<li><p><strong>trigger_threshold</strong> (<em>int</em>) – Angle change that trigger a full turn detection.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Class containing all the measured data.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData" title="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData">SensorAngleVsReferenceEncoderData</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.measure_speed">
+<span class="sig-name descname"><span class="pre">measure_speed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.measure_speed" title="Link to this definition"></a></dt>
+<dd><p>Measure speed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Speed output of the sensor.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_turn">
+<span class="sig-name descname"><span class="pre">set_turn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">turn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.set_turn" title="Link to this definition"></a></dt>
+<dd><p>Set the multi turn offset of sensor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>turn</strong> (<em>int</em>) – Set MTOFFSET of the sensor (min is -32768, max is 32767).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.measure_turn">
+<span class="sig-name descname"><span class="pre">measure_turn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.measure_turn" title="Link to this definition"></a></dt>
+<dd><p>Measure turn</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of turn since startup (returned value is between -32768 &amp; 32767).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.reset_user_calibration">
+<span class="sig-name descname"><span class="pre">reset_user_calibration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.reset_user_calibration" title="Link to this definition"></a></dt>
+<dd><p>Reset the user calibration (register map only, not the non-volatile memory).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.measure_inl_extract_calibration_table">
+<span class="sig-name descname"><span class="pre">measure_inl_extract_calibration_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_of_measures</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_in_microseconds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trigger_threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData" title="magalpha_evaluation_api.harmonics.SensorData"><span class="pre">SensorData</span></a></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.measure_inl_extract_calibration_table" title="Link to this definition"></a></dt>
+<dd><p>Perform a measurement with a motor rotating and a external reference encoder then extract the corresponding INL correction table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_of_measures</strong> (<em>int</em>) – Number of samples that will be acquired (min is 1, max is 2048).</p></li>
+<li><p><strong>delay_in_microseconds</strong> (<em>int</em>) – Delay time between each sample (min is 0, max is 1000000).</p></li>
+<li><p><strong>trigger_threshold</strong> (<em>int</em>) – Angle difference that trigger the detection of a full rotation (min 0, max 360).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>MPS Custom data types containing the measurements and all the related data.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#magalpha_evaluation_api.harmonics.SensorData" title="magalpha_evaluation_api.harmonics.SensorData">SensorData</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.compute_calibration_table_cw_ccw">
+<span class="sig-name descname"><span class="pre">compute_calibration_table_cw_ccw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calibration_table_cw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_table_ccw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.compute_calibration_table_cw_ccw" title="Link to this definition"></a></dt>
+<dd><p>Compute the final calibration table by taking into account INL in clockwise and counter clockwise direction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Final correction table in lsb.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.store_user_calibration">
+<span class="sig-name descname"><span class="pre">store_user_calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">register_value_to_write_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.store_user_calibration" title="Link to this definition"></a></dt>
+<dd><p>Store INL correction table into non-volatile memory (similar to store_register_block(1) but can fill it beforehand).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>register_value_to_write_list</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – List of correction value (32 bytes wide).
+defaults to None (by defaults it will store the current registers content in the non-volatile memory).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.save_user_calibration_table_file">
+<span class="sig-name descname"><span class="pre">save_user_calibration_table_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_directory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_correction_table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.save_user_calibration_table_file" title="Link to this definition"></a></dt>
+<dd><p>Save the user correction table in a file at a given output_directory in a given folder_name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>output_directory</strong> (<em>str</em>) – Path to the repository where folder_name will be created and files will be saved</p></li>
+<li><p><strong>folder_name</strong> (<em>str</em>) – Folder name (Existing or not, doesn’t matter)</p></li>
+<li><p><strong>user_correction_table</strong> (<em>np.ndarray</em>) – Array of integer that have been filled inside the user correction table of the sensor</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.clear_error_flag">
+<span class="sig-name descname"><span class="pre">clear_error_flag</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.api_ma_rp_pico.MagAlphaEvaluationAPI.clear_error_flag" title="Link to this definition"></a></dt>
+<dd><p>Clear error flags.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-magalpha_evaluation_api.harmonics">
+<span id="harmonics"></span><h1>Harmonics<a class="headerlink" href="#module-magalpha_evaluation_api.harmonics" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">magalpha_evaluation_api.harmonics.</span></span><span class="sig-name descname"><span class="pre">SensorData</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData" title="Link to this definition"></a></dt>
+<dd><p>Class for extracting inl harmonics from the data produced by the evaluation kit.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.reconstructed_angle_error_array">
+<span class="sig-name descname"><span class="pre">reconstructed_angle_error_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.reconstructed_angle_error_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.reconstructed_angle_error_without_offset_array">
+<span class="sig-name descname"><span class="pre">reconstructed_angle_error_without_offset_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.reconstructed_angle_error_without_offset_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.angle_array">
+<span class="sig-name descname"><span class="pre">angle_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.angle_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.reconstructed_reference_angle_array">
+<span class="sig-name descname"><span class="pre">reconstructed_reference_angle_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.reconstructed_reference_angle_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.time_array">
+<span class="sig-name descname"><span class="pre">time_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.time_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.error_array">
+<span class="sig-name descname"><span class="pre">error_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.error_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.correction_table">
+<span class="sig-name descname"><span class="pre">correction_table</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.correction_table" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.angle_table">
+<span class="sig-name descname"><span class="pre">angle_table</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.angle_table" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.error_remaining_after_correction">
+<span class="sig-name descname"><span class="pre">error_remaining_after_correction</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.error_remaining_after_correction" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.error_remaining_after_correction_over_time">
+<span class="sig-name descname"><span class="pre">error_remaining_after_correction_over_time</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.error_remaining_after_correction_over_time" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.error_without_offset_array">
+<span class="sig-name descname"><span class="pre">error_without_offset_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.error_without_offset_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.reference_angle_array">
+<span class="sig-name descname"><span class="pre">reference_angle_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.reference_angle_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.error_after_correction_array">
+<span class="sig-name descname"><span class="pre">error_after_correction_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.error_after_correction_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.zero_crossing_index_array">
+<span class="sig-name descname"><span class="pre">zero_crossing_index_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.zero_crossing_index_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.reference_angle_array_sorted">
+<span class="sig-name descname"><span class="pre">reference_angle_array_sorted</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.reference_angle_array_sorted" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.angle_array_sorted">
+<span class="sig-name descname"><span class="pre">angle_array_sorted</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.angle_array_sorted" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.error_array_sorted">
+<span class="sig-name descname"><span class="pre">error_array_sorted</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.error_array_sorted" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.error_without_offset_array_sorted">
+<span class="sig-name descname"><span class="pre">error_without_offset_array_sorted</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.error_without_offset_array_sorted" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.sorting_indices_array">
+<span class="sig-name descname"><span class="pre">sorting_indices_array</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.sorting_indices_array" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.angle_array_sorted_before_calibration">
+<span class="sig-name descname"><span class="pre">angle_array_sorted_before_calibration</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.angle_array_sorted_before_calibration" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.error_without_offset_array_sorted_before_calibration">
+<span class="sig-name descname"><span class="pre">error_without_offset_array_sorted_before_calibration</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.error_without_offset_array_sorted_before_calibration" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.correct_angle_using_correction_table">
+<span class="sig-name descname"><span class="pre">correct_angle_using_correction_table</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.correct_angle_using_correction_table" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.inl">
+<span class="sig-name descname"><span class="pre">inl</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.inl" title="Link to this definition"></a></dt>
+<dd><p>Peak-to-peak error divided by two</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.offset">
+<span class="sig-name descname"><span class="pre">offset</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.offset" title="Link to this definition"></a></dt>
+<dd><p>Offset of the error signal</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.h1">
+<span class="sig-name descname"><span class="pre">h1</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.h1" title="Link to this definition"></a></dt>
+<dd><p>Amplitude of h1 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.h2">
+<span class="sig-name descname"><span class="pre">h2</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.h2" title="Link to this definition"></a></dt>
+<dd><p>Amplitude of h2 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.h3">
+<span class="sig-name descname"><span class="pre">h3</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.h3" title="Link to this definition"></a></dt>
+<dd><p>Amplitude of h3 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.h4">
+<span class="sig-name descname"><span class="pre">h4</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.h4" title="Link to this definition"></a></dt>
+<dd><p>Amplitude of h4 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.h5">
+<span class="sig-name descname"><span class="pre">h5</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.h5" title="Link to this definition"></a></dt>
+<dd><p>Amplitude of h5 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.h6">
+<span class="sig-name descname"><span class="pre">h6</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.h6" title="Link to this definition"></a></dt>
+<dd><p>Amplitude of h6 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.h7">
+<span class="sig-name descname"><span class="pre">h7</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.h7" title="Link to this definition"></a></dt>
+<dd><p>Amplitude of h7 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.h8">
+<span class="sig-name descname"><span class="pre">h8</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.h8" title="Link to this definition"></a></dt>
+<dd><p>Amplitude of h8 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi1">
+<span class="sig-name descname"><span class="pre">phi1</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi1" title="Link to this definition"></a></dt>
+<dd><p>Phase of h1 in radians</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi2">
+<span class="sig-name descname"><span class="pre">phi2</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi2" title="Link to this definition"></a></dt>
+<dd><p>Phase of h2 in radians</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi3">
+<span class="sig-name descname"><span class="pre">phi3</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi3" title="Link to this definition"></a></dt>
+<dd><p>Phase of h3 in radians</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi4">
+<span class="sig-name descname"><span class="pre">phi4</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi4" title="Link to this definition"></a></dt>
+<dd><p>Phase of h4 in radians</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi5">
+<span class="sig-name descname"><span class="pre">phi5</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi5" title="Link to this definition"></a></dt>
+<dd><p>Phase of h5 in radians</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi6">
+<span class="sig-name descname"><span class="pre">phi6</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi6" title="Link to this definition"></a></dt>
+<dd><p>Phase of h6 in radians</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi7">
+<span class="sig-name descname"><span class="pre">phi7</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi7" title="Link to this definition"></a></dt>
+<dd><p>Phase of h7 in radians</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi8">
+<span class="sig-name descname"><span class="pre">phi8</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi8" title="Link to this definition"></a></dt>
+<dd><p>Phase of h8 in radians</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi1_in_degree">
+<span class="sig-name descname"><span class="pre">phi1_in_degree</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi1_in_degree" title="Link to this definition"></a></dt>
+<dd><p>Phase of h1 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi2_in_degree">
+<span class="sig-name descname"><span class="pre">phi2_in_degree</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi2_in_degree" title="Link to this definition"></a></dt>
+<dd><p>Phase of h2 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi3_in_degree">
+<span class="sig-name descname"><span class="pre">phi3_in_degree</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi3_in_degree" title="Link to this definition"></a></dt>
+<dd><p>Phase of h3 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi4_in_degree">
+<span class="sig-name descname"><span class="pre">phi4_in_degree</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi4_in_degree" title="Link to this definition"></a></dt>
+<dd><p>Phase of h4 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi5_in_degree">
+<span class="sig-name descname"><span class="pre">phi5_in_degree</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi5_in_degree" title="Link to this definition"></a></dt>
+<dd><p>Phase of h5 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi6_in_degree">
+<span class="sig-name descname"><span class="pre">phi6_in_degree</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi6_in_degree" title="Link to this definition"></a></dt>
+<dd><p>Phase of h6 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi7_in_degree">
+<span class="sig-name descname"><span class="pre">phi7_in_degree</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi7_in_degree" title="Link to this definition"></a></dt>
+<dd><p>Phase of h7 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.phi8_in_degree">
+<span class="sig-name descname"><span class="pre">phi8_in_degree</span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.phi8_in_degree" title="Link to this definition"></a></dt>
+<dd><p>Phase of h8 in degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.detect_zero_crossing">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">detect_zero_crossing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.detect_zero_crossing" title="Link to this definition"></a></dt>
+<dd><p>Detect full rotation index from a given angle array in degree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle_array</strong> (<em>np.ndarray</em>) – Angle array in degree.</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – Size of delta angle that trigger a full turn detection.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Array of index corresponding to 0° crossing of angle_array.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.get_harmonics">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_harmonics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error_array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">harmonic_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.get_harmonics" title="Link to this definition"></a></dt>
+<dd><p>Calculate the amplitude and phase of a given harmonic order of a given error array (samples must be equidistant).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>error_array</strong> (<em>np.ndarray</em>) – Angle error array in degree.</p></li>
+<li><p><strong>harmonic_order</strong> (<em>int</em>) – Harmonic order.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Amplitude, Phase, cosinus, sinus.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[float, float, float, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.get_harmonics_xy_non_equidistant">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_harmonics_xy_non_equidistant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurement_array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">harmonic_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">360.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.get_harmonics_xy_non_equidistant" title="Link to this definition"></a></dt>
+<dd><p>Calculate the amplitude and phase of a given harmonic order of a given reference_array and error_array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>measurement_array</strong> (<em>np.ndarray</em>) – Angle array of the external reference encoder (x axis).</p></li>
+<li><p><strong>error_array</strong> (<em>np.ndarray</em>) – Angle error array of the sensor.</p></li>
+<li><p><strong>harmonic_order</strong> (<em>int</em>) – Harmonic order.</p></li>
+<li><p><strong>scale</strong> (<em>float</em>) – Scale of array (if the other array aren’t over 360°), defaults to 360°.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.reconstruct_signal_with_n_harmonics">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reconstruct_signal_with_n_harmonics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reconstructed_angle_array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_angle_array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.reconstruct_signal_with_n_harmonics" title="Link to this definition"></a></dt>
+<dd><p>Reconstructs the signal using 8 harmonics. It returns the reconstructed signal, the list of amplitudes and the list of phases of the harmonics and the offset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_angle_array</strong> (<em>np.ndarray</em>) – The input angle array in degrees.</p></li>
+<li><p><strong>error_array</strong> (<em>np.ndarray</em>) – The angle error array in degrees.</p></li>
+<li><p><strong>n</strong> (<em>int</em>) – The number of harmonics to use.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the reconstructed signal.
+harmonics_amplitude (list[float]): list coitaining the amplitudes of the harmonics.
+harmonics_phase (list[float]): list coitaining the phases of the harmonics.
+offset (float): The offset of the angle error.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>reconstructed_signal (_type_)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.set_number_of_pole_pairs_of_the_magnet">
+<span class="sig-name descname"><span class="pre">set_number_of_pole_pairs_of_the_magnet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_of_pole_pairs_of_the_magnet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.set_number_of_pole_pairs_of_the_magnet" title="Link to this definition"></a></dt>
+<dd><p>Set the number of pole pairs of the magnet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>number_of_pole_pairs_of_the_magnet</strong> (<em>int</em>) – Number of pole pairs of the magnet.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.get_number_of_pole_pairs_of_the_magnet">
+<span class="sig-name descname"><span class="pre">get_number_of_pole_pairs_of_the_magnet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.get_number_of_pole_pairs_of_the_magnet" title="Link to this definition"></a></dt>
+<dd><p>Get the number of pole pairs of the magnet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of pole pairs of the magnet of the instance.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.reconstruct_averaged_signal_with_8_harmonics">
+<span class="sig-name descname"><span class="pre">reconstruct_averaged_signal_with_8_harmonics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.reconstruct_averaged_signal_with_8_harmonics" title="Link to this definition"></a></dt>
+<dd><p>Calculate the amplitude and phase of 8 harmonics of a given error array. Then reconstruct the signal using the previously computed parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.trunkate_array_before_first_zero_crossing">
+<span class="sig-name descname"><span class="pre">trunkate_array_before_first_zero_crossing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.trunkate_array_before_first_zero_crossing" title="Link to this definition"></a></dt>
+<dd><p>Suppress the useless partial initial rotation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>array</strong> (<em>np.ndarray</em>) – Angle array of dynamic measurements.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Angle array of dynamic measurements trunkated.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.trunkate_array_before_first_and_afer_last_zero_crossings">
+<span class="sig-name descname"><span class="pre">trunkate_array_before_first_and_afer_last_zero_crossings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.trunkate_array_before_first_and_afer_last_zero_crossings" title="Link to this definition"></a></dt>
+<dd><p>Suppres the useless partial initial rotation as well as the last partial rotation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array</strong> (<em>np.ndarray</em>) – Angle array of dynamic measurements.</p></li>
+<li><p><strong>Returns</strong> – np.ndarray: Angle array of dynamic measurements trunkated.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.set_harmonics_from_list">
+<span class="sig-name descname"><span class="pre">set_harmonics_from_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">harmonics_amplitude_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">harmonics_phase_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.set_harmonics_from_list" title="Link to this definition"></a></dt>
+<dd><p>Set the harmonics from lists of amplitudes and phases values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>harmonics_amplitude_list</strong> (<em>list</em><em>[</em><em>float</em><em>]</em>) – List of 8 harmonic amplitudes.</p></li>
+<li><p><strong>harmonics_phase_list</strong> (<em>list</em><em>[</em><em>float</em><em>]</em>) – List of 8 harmonic phases.</p></li>
+<li><p><strong>offset</strong> (<em>float</em>) – Offset of the initial signal.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.compute_correction_table">
+<span class="sig-name descname"><span class="pre">compute_correction_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_of_points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">32</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.compute_correction_table" title="Link to this definition"></a></dt>
+<dd><p>Compute a INL correction table extracted data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>number_of_points</strong> (<em>int</em>) – Number of correction points.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.get_correction_values_in_lsb">
+<span class="sig-name descname"><span class="pre">get_correction_values_in_lsb</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.get_correction_values_in_lsb" title="Link to this definition"></a></dt>
+<dd><p>Get correction values in lsb.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return a list of angle error in lsb</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.get_correction_values_to_write_to_ma600_registers">
+<span class="sig-name descname"><span class="pre">get_correction_values_to_write_to_ma600_registers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.get_correction_values_to_write_to_ma600_registers" title="Link to this definition"></a></dt>
+<dd><p>Compute the correction values that have to be filled inside correction table of the sensor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of 32 correction value.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.extract_sensor_data">
+<span class="sig-name descname"><span class="pre">extract_sensor_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable_angle_trigger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.extract_sensor_data" title="Link to this definition"></a></dt>
+<dd><p>Fill the class attributes from the dynamic measurements done with an external reference encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<a class="reference internal" href="#magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData" title="magalpha_evaluation_api.api_ma_rp_pico.SensorAngleVsReferenceEncoderData"><em>SensorAngleVsReferenceEncoderData</em></a>) – Class that contains all the measurements</p></li>
+<li><p><strong>enable_angle_trigger</strong> (<em>bool</em>) – Should always be set to True for v1.1.0</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.harmonics.SensorData.save_files">
+<span class="sig-name descname"><span class="pre">save_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_directory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#magalpha_evaluation_api.harmonics.SensorData.save_files" title="Link to this definition"></a></dt>
+<dd><p>Save measurements into files in a given output directory and folder name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>output_directory</strong> (<em>str</em>) – Path to the root folder</p></li>
+<li><p><strong>folder_name</strong> (<em>str</em>) – Folder name where the file will be created</p></li>
+<li><p><strong>file_name</strong> (<em>str</em>) – File name (An excel file with this name will be created with two sheets, Measurements and Statistics)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-magalpha_evaluation_api.magalpha_part_properties">
+<span id="magalpha-part-properties"></span><h1>MagAlpha Part Properties<a class="headerlink" href="#module-magalpha_evaluation_api.magalpha_part_properties" title="Link to this heading"></a></h1>
+<p>MagAlpha Part Properties</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">magalpha_evaluation_api.magalpha_part_properties.</span></span><span class="sig-name descname"><span class="pre">MagAlphaSPIMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode" title="Link to this definition"></a></dt>
+<dd><p>MagAlpha SPI Mode Enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode.MODE_0">
+<span class="sig-name descname"><span class="pre">MODE_0</span></span><a class="headerlink" href="#magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode.MODE_0" title="Link to this definition"></a></dt>
+<dd><ol class="arabic simple" start="0">
+<li></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>enum.IntEnum</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode.MODE_3">
+<span class="sig-name descname"><span class="pre">MODE_3</span></span><a class="headerlink" href="#magalpha_evaluation_api.magalpha_part_properties.MagAlphaSPIMode.MODE_3" title="Link to this definition"></a></dt>
+<dd><ol class="arabic simple" start="3">
+<li></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>enum.IntEnum</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="MagAlpha Evaluation API Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Monolithic Power System.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

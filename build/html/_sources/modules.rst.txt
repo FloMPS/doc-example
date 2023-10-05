@@ -1,0 +1,20 @@
+MagAlpha Evaluation API
+================================
+
+.. automodule:: magalpha_evaluation_api.api_ma_rp_pico
+   :members: MagAlphaEvaluationAPI, SensorAngleData, SensorAngleVsReferenceEncoderData
+   :exclude-members: 
+
+Harmonics
+================================
+
+.. automodule:: magalpha_evaluation_api.harmonics
+   :members:
+   :exclude-members:
+
+MagAlpha Part Properties
+================================
+
+.. automodule:: magalpha_evaluation_api.magalpha_part_properties
+   :members:
+   :exclude-members: QuickReadMode, MagAlphaInterface, MagAlphaGeneration, MagAlphaSSIMode, MagAlphaPartNumber, AbzInterface, CorrectionTableType
