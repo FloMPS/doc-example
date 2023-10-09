@@ -46,7 +46,8 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
-          pip install versioneer conda-build
+          pip install versioneer 
+          pip install conda-build
           conda-build . --output-folder condapkg
 
       - name: Upload artifact to github
