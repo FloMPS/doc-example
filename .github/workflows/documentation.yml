@@ -24,6 +24,7 @@ jobs:
       - name: Build the docs
         run: |
           cd doc
+          sphinx-apidoc -o ./source ../src
           make html
 
       - name: Deploy to GitHub Pages
@@ -34,6 +35,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: doc/build/html/
           force_orphan: true
+
+
   build-conda-pkg:
     runs-on: windows-latest
 
@@ -47,7 +50,7 @@ jobs:
       run: |
         C:\Miniconda\condabin\conda.bat env update --file requirements.txt --name base
         C:\Miniconda\condabin\conda.bat init powershell
-    - name: Lint with flake8
+    - name: Create conda package
       run: |
         # Activate the base environment
         C:\Miniconda\condabin\conda.bat activate base
