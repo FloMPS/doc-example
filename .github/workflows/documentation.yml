@@ -35,23 +35,30 @@ jobs:
           publish_dir: doc/build/html/
           force_orphan: true
   build-conda-pkg:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: "3.10"
-      - name: Install dependencies an build conda package
-        run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install versioneer 
-          pip install conda-build
-          conda-build . --output-folder condapkg
+    runs-on: windows-latest
 
-      - name: Upload artifact to github
-        uses: actions/upload-artifact@v3
-        with:
-          name: conda-package
-          path: condapkg/win-64/*.tar.bz2
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        C:\Miniconda\condabin\conda.bat env update --file requirements.txt --name base
+        C:\Miniconda\condabin\conda.bat init powershell
+    - name: Lint with flake8
+      run: |
+        # Activate the base environment
+        C:\Miniconda\condabin\conda.bat activate base
+        C:\Miniconda\condabin\conda.bat install conda-build
+        C:\Miniconda\condabin\conda.bat build . --output-folder condapkg
+
+    - name: Upload artifact to github
+      uses: actions/upload-artifact@v3
+      with:
+        name: conda-package
+        path: condapkg/win-64/*.tar.bz2
+
+
+          
