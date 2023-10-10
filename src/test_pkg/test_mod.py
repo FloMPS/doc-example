@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from PySide6 import QtCore, QtGui, QtUiTools, QtWidgets
 
 def hello():
     """Prints a hello message
